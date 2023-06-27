@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-b1" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Bài 1</button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-b2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bài 2</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-b3" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Bài 3</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-b4" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Bài 4</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-b5" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Bài 5</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-b1" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="containter mt-5">
+                    <div class="mb-3">
+                        <label id="tienTHanhToan" for="" class="form-label">Số Ngày Làm Việc</label>
+                        <input type="text" class="form-control" name="" id="soNgay" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <button id="tinhLuong" class="btn btn-success"> Tính Lương </button>
+                    <div class="bg-success bg-opacity-75 text-white o-3" id="tienLuong">Tiền Lương: NaN</div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="tab-pane fade" id="nav-b2" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="containter mt-5">
+                    <div class="mb-3">
+                        <label  for="" class="form-label">Số thứ 1</label>
+                        <input type="text" class="form-control" name="" id="num1" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label  for="" class="form-label">Số thứ 2</label>
+                        <input type="text" class="form-control" name="" id="num2" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Số thứ 3</label>
+                        <input type="text" class="form-control" name="" id="num3" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Số thứ 4</label>
+                        <input type="text" class="form-control" name="" id="num4" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Số thứ 5</label>
+                        <input type="text" class="form-control" name="" id="num5" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <button id="avg" class="btn btn-success"> Tính Trung Bình </button>
+                    <div class="bg-success bg-opacity-75 text-white o-3" id="avgValue">Trung Bình: NaN</div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="tab-pane fade" id="nav-b3" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="containter mt-5">
+                    <div class="mb-3">
+                        <label for="" class="form-label">USD</label>
+                        <input type="text" class="form-control" name="" id="usd" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <button id="chuyenDoi" class="btn btn-success"> Chuyển Đổi </button>
+                    <div class="bg-success bg-opacity-75 text-white o-3" id="vnd">VND: NaN</div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="tab-pane fade" id="nav-b4" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="containter mt-5">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Chiều Dài</label>
+                        <input type="text" class="form-control" name="" id="width" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Chiều Rộng</label>
+                        <input type="text" class="form-control" name="" id="height" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <button id="gen" class="btn btn-success"> Tính Toán </button>
+                    <div class="bg-success bg-opacity-75 text-white o-3" id="cv">Chu Vi: NaN</div>
+                    <div class="bg-success bg-opacity-75 text-white o-3" id="dt">Diện Tích: NaN</div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="tab-pane fade" id="nav-b5" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="containter mt-5">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nhap So Co 2 Chu So</label>
+                        <input type="text" class="form-control" name="" id="so" aria-describedby="helpId"
+                            placeholder="">
+                    </div>
+                    <button id="calc" class="btn btn-success"> Tính </button>
+                    <div class="bg-success bg-opacity-75 text-white o-3" id="tong">Tổng: NaN</div>
+                </div>
+            </div>
+          </div>
+        <!-- Tabs content -->
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
