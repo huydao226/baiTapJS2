@@ -60,34 +60,82 @@ document.querySelector('#tinhKetQua').onclick = function () {
 
 }
 
-// document.querySelector('#calc').onclick = function () {
-//     var so = +document.getElementById('so').value;  
-//     if(9 < so  && so < 99 && Number.isInteger(so)) {
-//         var so_hang_dv = so%10;
-//         var so_hang_chuc = (so - so_hang_dv)/10;
-//         var tong = + (so_hang_dv + so_hang_chuc)
-//         document.getElementById("tong").innerHTML = 'Tổng của 2 số: ' + tong
-//     } else alert("Nhap Sai");
-// }
+// Tiền Điện
+document.querySelector('#tinhTienDien').onclick = function () {
+    var hoTen = document.getElementById('hoTen').value;
+    var kw = +document.getElementById('kw').value;
+    var a = 0
+    var b = 0
+    var c = 0
+    var d = 0 
+    var e = 0;
 
-// // //Bai 2
-// document.querySelector('#avg').onclick = function () {
-//     var num1 = +document.getElementById('num1').value;
-//     var num2 = +document.getElementById('num2').value;
-//     var num3 = +document.getElementById('num3').value;
-//     var num4 = +document.getElementById('num4').value;
-//     var num5 = +document.getElementById('num5').value;
-//     var avg = (num1 + num2 + num3 + num4 + num5) / 5;
-//     document.getElementById("avgValue").innerHTML = 'Avg: ' + avg
-// }
+    console.log(a);
+    if (kw >= 0 ) {
+        if(kw <= 50) {
+            a = kw;
+        } else if(kw <= 100) {
+            a = 50;
+            b = kw - a;
+        } else if(kw <= 200) {
+            a = 50;
+            b = 50;
+            c = kw - a - b;
+        } else if(kw <= 350) {
+            a = 50;
+            b = 50;
+            c = 100;
+            d = kw - a - b - c;
+        } else {
+            a = 50;
+            b = 50;
+            c = 100;
+            d = kw - a - b - c; 
+        }
+        var tongTien = (500 * a) + (650 * b) + (850 * c) + (1100 * d) + (1300 * e) 
+        console.log(tongTien)
+        document.getElementById("tongTienDien").innerHTML = 'Anh/Chị ' + hoTen + " phải trả tổng số tiền là: " + tongTien;
+    } else {
+        alert("Kw phải là số dương");
+    }
+}
 
-// //Bai 3
-// document.querySelector('#chuyenDoi').onclick = function () {
-//     var rate = 23500;
-//     var usd = document.getElementById('usd').value;
-//     var vnd = rate * usd;
-//     document.getElementById("vnd").innerHTML = 'VND: ' + vnd
-// }
+//Thuế
+document.querySelector('#tinhThue').onclick = function () {
+    var hoTen = document.getElementById('hoTen2').value;
+    var tongThuNhap = +document.getElementById('thuNhap').value;
+    var soNguoiPhuThuoc = +document.getElementById('phuThuoc').value;
+
+    var thuNhapChiuThue = tongThuNhap - 4000000 - (soNguoiPhuThuoc * 1600000);
+    var thue;
+    var max1 = (60000000 * 5/100);
+    var max2 = max1 + (60000000 * 10/100);
+    var max3 = max2 + (90000000 * 15/100);
+    var max4 = max3 + (174000000 * 20/100);
+    var max5 = max4 + (240000000 * 25/100);
+    var max6 = max5 + (336000000 * 30/100);
+
+    if (thuNhapChiuThue > 0) {
+        if (thuNhapChiuThue <= 60000000) {
+            thue = thuNhapChiuThue * 5/100 ;
+        } else if (thuNhapChiuThue <= 120000000) {
+            thue = max1 + (thuNhapChiuThue - 60000000) * 10/100 ;
+        } else if (thuNhapChiuThue <= 210000000) {
+            thue = max1 + (thuNhapChiuThue - 120000000) * 15/100 ;
+        } else if (thuNhapChiuThue <= 384000000) {
+            thue = max1 + (thuNhapChiuThue - 210000000) * 20/100 ;
+        } else if (thuNhapChiuThue <= 624000000) {
+            thue = max1 + (thuNhapChiuThue - 384000000) * 25/100 ;
+        } else if (thuNhapChiuThue <= 960000000) {
+            thue = max1 + (thuNhapChiuThue - 624000000) * 30/100 ;
+        } else {
+            thue = max6 + (thuNhapChiuThue - 960000000) * 35/100 ;
+        }
+        document.getElementById("thue").innerHTML = 'Anh/Chị ' + hoTen + " phải nộp tổng số thuế là: " + thue;
+    } else {
+        document.getElementById("thue").innerHTML = 'Anh/Chị ' + hoTen + " phải nộp tổng số thuế là: " + 0;
+    }
+}
 
 // // //Bai 4
 // document.querySelector('#gen').onclick = function () {
@@ -97,17 +145,5 @@ document.querySelector('#tinhKetQua').onclick = function () {
 //     var dt = width * height;
 //     document.getElementById("cv").innerHTML = 'Chu Vi: ' + cv
 //     document.getElementById("dt").innerHTML = 'Diện Tích: ' + dt
-
-// }
-
-// //Bai 5
-// document.querySelector('#calc').onclick = function () {
-//     var so = +document.getElementById('so').value;  
-//     if(9 < so  && so < 99 && Number.isInteger(so)) {
-//         var so_hang_dv = so%10;
-//         var so_hang_chuc = (so - so_hang_dv)/10;
-//         var tong = + (so_hang_dv + so_hang_chuc)
-//         document.getElementById("tong").innerHTML = 'Tổng của 2 số: ' + tong
-//     } else alert("Nhap Sai");
 
 // }
